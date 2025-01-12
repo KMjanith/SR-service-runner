@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Define the paths (if necessary)
-export FRONTEND_PATH="${pwd}/../frontend"
-export AUTH_SERVICE_PATH="$(pwd)/../auth-service"
-export API_GATEWAY_PATH="$(pwd)/../api-gateway"
-export SORTING_PATH="$(pwd)/../soritng-service"
+export FRONTEND_PATH="$(pwd)/../SR-frontend"
+export AUTH_SERVICE_PATH="$(pwd)/../SR-auth-service"
+export API_GATEWAY_PATH="$(pwd)/../SR-ai-gateway"
+export SORTING_PATH="$(pwd)/../SR-sorting-service"
 
 
 # Navigate to the directory containing docker-compose.dev.yml if not in the same directory

@@ -13,10 +13,10 @@ while ! docker info > /dev/null 2>&1; do
 done
 
 # Define the paths
-export FRONTEND_PATH="$(pwd)/../frontend"
-export AUTH_SERVICE_PATH="$(pwd)/../auth-service"
-export API_GATEWAY_PATH="$(pwd)/../api-gateway"
-export SORTING_PATH="$(pwd)/../soritng-service"
+export FRONTEND_PATH="$(pwd)/../SR-frontend"
+export AUTH_SERVICE_PATH="$(pwd)/../SR-auth-service"
+export API_GATEWAY_PATH="$(pwd)/../SR-ai-gateway"
+export SORTING_PATH="$(pwd)/../SR-sorting-service"
 
 echo $FRONTEND_PATH
 echo $AUTH_SERVICE_PATH

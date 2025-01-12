@@ -11,10 +11,10 @@ if %ERRORLEVEL% NEQ 0 (
 )
 
 :: Define the paths
-SET "FRONTEND_PATH=%CD%\..\frontend"
-SET "AUTH_SERVICE_PATH=%CD%\..\auth-service"
-SET "API_GATEWAY_PATH=%CD%\..\api-gateway"
-SET "SORTING_PATH=%CD%\..\sorting-service"
+SET "FRONTEND_PATH=%CD%\..\SR-frontend"
+SET "AUTH_SERVICE_PATH=%CD%\..\SR-auth-service"
+SET "API_GATEWAY_PATH=%CD%\..\SR-ai-gateway"
+SET "SORTING_PATH=%CD%\..\SR-sorting-service"
 
 echo %AUTH_SERVICE_PATH%
 echo %API_GATEWAY_PATH%

@@ -1,10 +1,10 @@
 @echo off
 
 :: Define the paths (if necessary)
-SET "FRONTEND_PATH=%CD%\..\frontend"
-SET "AUTH_SERVICE_PATH=%CD%\..\auth-service"
-SET "API_GATEWAY_PATH=%CD%\..\api-gateway"
-SET "SORTING_PATH=%CD%\..\sorting-service"
+SET "FRONTEND_PATH=%CD%\..\SR-frontend"
+SET "AUTH_SERVICE_PATH=%CD%\..\SR-auth-service"
+SET "API_GATEWAY_PATH=%CD%\..\SR-ai-gateway"
+SET "SORTING_PATH=%CD%\..\SR-sorting-service"
 
 
 
