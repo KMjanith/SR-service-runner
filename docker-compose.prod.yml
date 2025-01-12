@@ -1,0 +1,45 @@
+services:
+  rabbitmq:
+    image: rabbitmq:4.0-management
+    container_name: rabbitmq-gpu_nexus
+    ports:
+      - "5672:5672"
+      - "15672:15672" # Management UI
+    healthcheck:
+      test: ["CMD", "rabbitmqctl", "status"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  authentication-service:
+    image: mjanith/authservice:${AUTH_TAG} # Docker Hub repo image
+    ports:
+      - "8082:8082"
+    env_file:
+      - envFiles/auth.env
+    container_name: authservice
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  api-gateway:
+    image: mjanith/apigateway:${API_TAG} # Docker Hub repo image
+    ports:
+      - "8081:8081"
+    env_file:
+      - envFiles/apiGateway.env
+    container_name: api-gateway
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  sorting-service:
+    image: mjanith/sorting-service:${SORT_TAG} # Docker Hub repo image
+    ports:
+      - "8083:8083"
+    env_file:
+      - envFiles/sorting.env
+    container_name: sorting
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
