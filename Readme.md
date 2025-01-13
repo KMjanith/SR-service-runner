@@ -59,14 +59,14 @@ docker logs -f <container-id>   # to see live logs
 
 #### This microservice application is use only to demonstrate the functionality of the this `service-runner` service. Hence do not consider the logic used in the individual service.
 
-![all service architecture](286358e4-c488-4404-8c9e-6e18ef9be020.png)
+![all service architecture](images/286358e4-c488-4404-8c9e-6e18ef9be020.png)
 
 #### After succcefull registration user direct to the soriting page. There users can input comma seperated integers and choose the method to sort. Then sorting service will sort the input and calculate the time taken to sort. Then output will display as follow.
 
 </br>
 </br>
 
-![fron end output](front-end-output.png)
+![fron end output](images/front-end-output.png)
 
 </br>
 
