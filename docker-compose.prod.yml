@@ -11,8 +11,17 @@ services:
       timeout: 10s
       retries: 3
 
+  frontend:
+    #image: mjanith/SR-frontend
+    ports:
+      - "80:80"
+    container_name: frontend
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
   authentication-service:
-    image: mjanith/authservice:${AUTH_TAG} # Docker Hub repo image
+    # image: mjanith/SR-authservice:${AUTH_TAG} # Docker Hub repo image
     ports:
       - "8082:8082"
     env_file:
@@ -23,7 +32,7 @@ services:
         condition: service_healthy
 
   api-gateway:
-    image: mjanith/apigateway:${API_TAG} # Docker Hub repo image
+    # image: mjanith/SR-apigateway:${API_TAG} # Docker Hub repo image
     ports:
       - "8081:8081"
     env_file:
@@ -34,7 +43,7 @@ services:
         condition: service_healthy
 
   sorting-service:
-    image: mjanith/sorting-service:${SORT_TAG} # Docker Hub repo image
+    # image: mjanith/SR-sorting-service:${SORT_TAG} # Docker Hub repo image
     ports:
       - "8083:8083"
     env_file:
