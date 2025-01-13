@@ -18,10 +18,10 @@ export AUTH_SERVICE_PATH="$(pwd)/../SR-auth-service"
 export API_GATEWAY_PATH="$(pwd)/../SR-ai-gateway"
 export SORTING_PATH="$(pwd)/../SR-sorting-service"
 
-echo $FRONTEND_PATH
-echo $AUTH_SERVICE_PATH
-echo $API_GATEWAY_PATH
-echo $SORTING_PATH
+echo "Frontend Path: $FRONTEND_PATH"
+echo "Auth Service Path: $AUTH_SERVICE_PATH"
+echo "API Gateway Path: $API_GATEWAY_PATH"
+echo "Sorting Service Path: $SORTING_PATH"
 
 # Check if 'build' argument is provided
 if [ "$1" == "build" ]; then
@@ -32,8 +32,12 @@ if [ "$1" == "build" ]; then
 
     # Go back to the original directory
     cd - || exit 1
-fi
 
-# Bring up Docker Compose services
-echo "Starting Docker Compose services..."
-docker compose -f docker-compose.dev.yml up -d --build
+    # Start only the frontend service and its dependencies
+    echo "Starting frontend service and its dependencies..."
+    docker compose -f docker-compose.dev.yml up -d --build frontend
+else
+    # Bring up all Docker Compose services
+    echo "Starting all Docker Compose services..."
+    docker compose -f docker-compose.dev.yml up -d --build
+fi
