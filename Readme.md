@@ -25,7 +25,7 @@
 5. service-runner - git clone https://github.com/KMjanith/SR-service-runner.git
 ```
 
-3. visit Medium article to see how this works.
+3. visit [Medium article](https://medium.com/@kavinduj.20/manage-miroservices-centrally-using-docker-compose-in-both-windows-and-linux-78e61753d284) to see how this works.
 4. Navigate to the `SR-service-runner`
 
 </br>
