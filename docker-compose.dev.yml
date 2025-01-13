@@ -21,8 +21,6 @@ services:
     depends_on:
       rabbitmq:
         condition: service_healthy
-      api-gateway:
-        condition: service_started
     volumes:
       - ${FRONTEND_PATH}:/app
 
