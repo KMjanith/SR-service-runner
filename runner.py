@@ -9,19 +9,22 @@ def get_latest_tag(repo_name):
     return latest_tag
 
 # Fetch the latest tag for each service
-auth_service_tag = get_latest_tag("mjanith/SR-authservice")
-api_gateway_tag = get_latest_tag("mjanith/SR-api-gateway")
-sorting_tag = get_latest_tag("mjanith/SR-sortservice")
+auth_service_tag = get_latest_tag("mjanith/sr-authservice")
+api_gateway_tag = get_latest_tag("mjanith/sr-api-gateway")
+sorting_tag = get_latest_tag("mjanith/sr-sortservice")
+frontend_tag = get_latest_tag("mjanith/sr-frontend")
 
 print(f"Latest tag for auth service: {auth_service_tag}")
 print(f"Latest tag for api gateway: {api_gateway_tag}")
 print(f"Latest tag for sorting: {sorting_tag}")
+print(f"Latest tag for frontend: {frontend_tag}")
 
 # Write the tags to an .env file
 with open('.env', 'w') as env_file:
     env_file.write(f"AUTH_TAG={auth_service_tag}\n")
     env_file.write(f"API_TAG={api_gateway_tag}\n")
     env_file.write(f"SORT_TAG={sorting_tag}\n")
+    env_file.write(f"FRONT_TAG={frontend_tag}\n")
 
 print("Latest tags fetched")
 print("starting services...")
