@@ -21,7 +21,7 @@ services:
         condition: service_healthy
 
   authentication-service:
-    image: mjanith/SR-authservice:${AUTH_TAG} # Docker Hub repo image
+    image: mjanith/sr-authservice:${AUTH_TAG} # Docker Hub repo image
     ports:
       - "8082:8082"
     env_file:
@@ -32,7 +32,7 @@ services:
         condition: service_healthy
 
   api-gateway:
-    image: mjanith/SR-api-gateway:${API_TAG} # Docker Hub repo image
+    image: mjanith/sr-api-gateway:${API_TAG} # Docker Hub repo image
     ports:
       - "8081:8081"
     env_file:
@@ -43,7 +43,7 @@ services:
         condition: service_healthy
 
   sorting-service:
-    image: mjanith/SR-sortservice:${SORT_TAG} # Docker Hub repo image
+    image: mjanith/sr-sortservice:${SORT_TAG} # Docker Hub repo image
     ports:
       - "8083:8083"
     env_file:
