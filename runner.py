@@ -9,9 +9,9 @@ def get_latest_tag(repo_name):
     return latest_tag
 
 # Fetch the latest tag for each service
-auth_service_tag = get_latest_tag("mjanith/authservice")
-api_gateway_tag = get_latest_tag("mjanith/apigateway")
-sorting_tag = get_latest_tag("mjanith/sorting")
+auth_service_tag = get_latest_tag("mjanith/SR-authservice")
+api_gateway_tag = get_latest_tag("mjanith/SR-api-gateway")
+sorting_tag = get_latest_tag("mjanith/SR-sortservice")
 
 print(f"Latest tag for auth service: {auth_service_tag}")
 print(f"Latest tag for api gateway: {api_gateway_tag}")
