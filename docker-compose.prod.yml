@@ -12,7 +12,7 @@ services:
       retries: 3
 
   frontend:
-    image: mjanith/SR-frontend:${FRONT_TAG}
+    image: mjanith/sr-frontend:${FRONT_TAG}
     ports:
       - "80:80"
     container_name: frontend
